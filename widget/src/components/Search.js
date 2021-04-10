@@ -20,7 +20,9 @@ const Search = () => {
             })
             setResults(data.query.search)
         }
-        Search()
+        if(term){
+            Search()
+        }
     },[term])
 
     const renderedResults = results.map((result)=>{
