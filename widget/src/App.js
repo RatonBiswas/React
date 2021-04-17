@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 // import Accordion from "./components/Accordion";
 import Test from "./components/Test";
-import Search from "./components/Search";
+// import Search from "./components/Search";
+import Dropdown from "./components/Dropdown";
 const App = () => {
   const [test, setTest] = useState(0);
 
@@ -26,6 +27,21 @@ const App = () => {
 //     [],
 //   );
 
+  const options = [
+    {
+      label: 'The Color Red',
+      value: 'Red'
+    },
+    {
+      label:'The Color Green',
+      value: 'Green'
+    },
+    {
+      label:'The Color Yellow',
+      value: 'Yellow'
+    }
+  ]
+
   return (
     <div>
       <button
@@ -36,7 +52,8 @@ const App = () => {
         {test}Click
       </button>
       {/* <Accordion items={items} /> */}
-      <Search/>
+      {/* <Search/> */}
+      <Dropdown options={options}/>
       <Test value={value} />
     </div>
   );
