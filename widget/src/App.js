@@ -41,7 +41,7 @@ const App = () => {
       value: 'Yellow'
     }
   ]
-
+  const [selected, setSelected] = useState(options[0])
   return (
     <div>
       <button
@@ -53,7 +53,7 @@ const App = () => {
       </button>
       {/* <Accordion items={items} /> */}
       {/* <Search/> */}
-      <Dropdown options={options}/>
+      <Dropdown selected={selected} onChangeSelected={setSelected} options={options}/>
       <Test value={value} />
     </div>
   );
