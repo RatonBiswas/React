@@ -1,13 +1,13 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, { useState } from "react";
+import React from "react";
 // import Accordion from "./components/Accordion";
-import Test from "./components/Test";
+// import Test from "./components/Test";
 // import Search from "./components/Search";
-import Dropdown from "./components/Dropdown";
+// import Dropdown from "./components/Dropdown";
+import Translate from "./components/Translate";
 const App = () => {
-  const [test, setTest] = useState(0);
+  
 
-  let value = 1;
 
 //   const items = React.useMemo(
 //     () => [
@@ -27,34 +27,33 @@ const App = () => {
 //     [],
 //   );
 
-  const options = [
-    {
-      label: 'The Color Red',
-      value: 'Red'
-    },
-    {
-      label:'The Color Green',
-      value: 'Green'
-    },
-    {
-      label:'The Color Yellow',
-      value: 'Yellow'
-    }
-  ]
-  const [selected, setSelected] = useState(options[0])
+  // const options = [
+  //   {
+  //     label: 'The Color Red',
+  //     value: 'Red'
+  //   },
+  //   {
+  //     label:'The Color Green',
+  //     value: 'Green'
+  //   },
+  //   {
+  //     label:'The Color Yellow',
+  //     value: 'Yellow'
+  //   }
+  // ]
+  // const [selected, setSelected] = useState(options[0])
+  // const [showDropdown,setShowDropdown] = useState(true)
   return (
     <div>
-      <button
-        onClick={() => {
-          setTest(test + 1);
-        }}
-      >
-        {test}Click
-      </button>
-      {/* <Accordion items={items} /> */}
-      {/* <Search/> */}
-      <Dropdown selected={selected} onChangeSelected={setSelected} options={options}/>
-      <Test value={value} />
+      {/* <button
+        onClick={() =>setShowDropdown(!showDropdown)}>
+          Toggle Dropdown
+        </button>
+      <Accordion items={items} />
+      <Search/>
+      <Dropdown selected={selected} onChangeSelected={setSelected} options={options}/> */}
+      <Translate/>
+  
     </div>
   );
 };
