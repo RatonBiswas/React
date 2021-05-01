@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Accordion = React.memo(({ items }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  console.log("I am here!");
+  
 
   const titleClicked = (index) => {
     setActiveIndex(index);
