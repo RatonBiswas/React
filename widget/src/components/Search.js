@@ -1,24 +1,23 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Search = () => {
   const [term, setTerm] = useState("programming");
+  const [debouncedTerm, setDebouncedTerm] = useState(term);
   const [results, setResults] = useState([]);
-  const [debouncedTerm, setDebouncedTerm] = useState(term)
 
   useEffect(() => {
-    const timerId = setTimeout(() =>{
-      setDebouncedTerm(term)
-    },1000)
+    const timerId = setTimeout(() => {
+      setDebouncedTerm(term);
+    }, 1000);
+
     return () => {
-      clearTimeout(timerId)
-    }
+      clearTimeout(timerId);
+    };
+  }, [term]);
 
-  },[term])
-
-  useEffect(() =>{
-    const Search = async () => {
+  useEffect(() => {
+    const search = async () => {
       const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
         params: {
           action: "query",
@@ -28,20 +27,19 @@ const Search = () => {
           srsearch: debouncedTerm,
         },
       });
+
       setResults(data.query.search);
     };
-    Search()
-  },[debouncedTerm])
-
-  
+    search();
+  }, [debouncedTerm]);
 
   const renderedResults = results.map((result) => {
     return (
       <div key={result.pageid} className="item">
         <div className="right floated content">
           <a
-            href={`https://en.wikipedia.org?curid=${result.pageid}`}
             className="ui button"
+            href={`https://en.wikipedia.org?curid=${result.pageid}`}
           >
             Go
           </a>
@@ -53,6 +51,7 @@ const Search = () => {
       </div>
     );
   });
+
   return (
     <div>
       <div className="ui form">
