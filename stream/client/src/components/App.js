@@ -1,17 +1,24 @@
+/* eslint-disable no-unreachable */
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const PageOne = () => {
-  return <div>PageOne</div>;
+  return (
+    <div>
+      PageOne
+      <Link to="/pagetwo">Reach to PageTwo</Link>
+    </div>
+  );
 };
 
 const PageTwo = () => {
-  return( 
-  <div>
+  return (
+    <div>
       PageTwo
       <button>Click me</button>
-  </div>
-  )
+      <Link to="/">Reach to PageOne</Link>
+    </div>
+  );
 };
 
 const App = () => {
