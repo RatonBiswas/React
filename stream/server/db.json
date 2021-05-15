@@ -1,4 +1,14 @@
 {
-    "streams":[]
-    
+  "streams": [
+    {
+      "title": "Backend developer",
+      "description": "anything can do.",
+      "id": 1
+    },
+    {
+      "title": "Develop Project",
+      "description": "anything can do.",
+      "id": 2
+    }
+  ]
 }
