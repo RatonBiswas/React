@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux'
+import { streamList } from '../../actions'
 
 const StreamList = () => {
     return (
@@ -8,4 +10,4 @@ const StreamList = () => {
     );
 };
 
-export default StreamList;
+export default connect(null,{streamList})(formWrapped)
