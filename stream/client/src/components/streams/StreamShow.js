@@ -15,6 +15,7 @@ class StreamShow extends Component {
     componentDidUpdate(){
         this.buildPlayer()
     }
+    
     buildPlayer(){
         const {id} = this.props.match.params.id
         if(this.player && this.props.stream){
