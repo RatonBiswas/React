@@ -19,7 +19,6 @@ class App extends Component {
         <LanguageContext.Provider value={this.state.language}>
           <UserCreate/>
         </LanguageContext.Provider>
-        {console.log(this.state.language)}
       </div>
     );
   }
