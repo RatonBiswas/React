@@ -5,12 +5,15 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "author": "Raton Biswas",
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.9"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2"
+  }
 }
