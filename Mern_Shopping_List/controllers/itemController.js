@@ -11,11 +11,10 @@ exports.getAllItems = (req, res) => {
 
 // Get a item
 exports.getItem = (req, res) => {
-    Item.findById(req.params.id) 
-      .then((items) => {
-        res.json(items);
-      });
-  };
+  Item.findById(req.params.id).then((items) => {
+    res.json(items);
+  });
+};
 
 // Create an item
 exports.createItem = (req, res) => {
@@ -29,14 +28,17 @@ exports.createItem = (req, res) => {
 
 // Delete an item
 exports.deleteItem = (req, res) => {
-  Item.findById(req.params.id).then((item) =>
-    item.remove().then(() => res.json({ success: true }))
-  ).catch(err => res.status(404).json({ success: false}))
+  Item.findById(req.params.id)
+    .then((item) => item.remove().then(() => res.json({ success: true })))
+    .catch((err) => res.status(404).json({ success: false }));
 };
 
 // Edit an item
 exports.editItem = (req, res) => {
-    Item.findByIdAndUpdate(req.params.id).then((item) =>
-      item.update().then(() => res.json({ success: true }))
-    ).catch(err => res.status(404).json({ success: false}))
-  };
+  const doc = Item.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  })
+    .then(() => res.json({ success: true }))
+    .catch((err) => res.status(404).json({ success: false }));
+};
