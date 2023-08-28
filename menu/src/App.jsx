@@ -5,6 +5,7 @@ import Categories from "./Catagories";
 import Menu from "./Menu";
 import Title from "./Title";
 const allCategories =['all', ...new Set(items.map((item) => item.category))]; // javascript nuggets
+console.log(allCategories);
 function App() {
   const [menuItems, setMenuItem] = useState(items);
   const [categories, setCategories] = useState(allCategories);
@@ -15,6 +16,7 @@ function App() {
       return;
     }
     const newCategory = items.filter((item) => item.category === category);
+    console.log(newCategory);
     setMenuItem(newCategory);
   };
 
