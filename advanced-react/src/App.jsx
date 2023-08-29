@@ -4,6 +4,7 @@ import UseUseStateObject from './topic/01-useState/UseUseStateObject'
 import UseUseEffectBasic from './topic/02-useEffect/UseUseEffectBasic'
 import UseUseEffectMultiple from './topic/02-useEffect/UseUseEffectMultiple'
 import MultipleInputs from './topic/03-form/MultipleInputs'
+import FetchData from './topic/04-custom-hooks/FetchData'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <UseUseEffectBasic/>
       <UseUseEffectMultiple/>
       <MultipleInputs/>
+      <FetchData/>
     </>
   )
 }
