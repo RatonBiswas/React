@@ -2,6 +2,8 @@ import UseState from './topic/01-useState/useState'
 import UseUseStateArray from './topic/01-useState/UseUseStateArray'
 import UseUseStateObject from './topic/01-useState/UseUseStateObject'
 import UseUseEffectBasic from './topic/02-useEffect/UseUseEffectBasic'
+import UseUseEffectMultiple from './topic/02-useEffect/UseUseEffectMultiple'
+import MultipleInputs from './topic/03-form/MultipleInputs'
 import './App.css'
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
       <UseUseStateArray/>
       <UseUseStateObject/>
       <UseUseEffectBasic/>
+      <UseUseEffectMultiple/>
+      <MultipleInputs/>
     </>
   )
 }
