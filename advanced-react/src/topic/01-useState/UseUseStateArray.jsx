@@ -9,6 +9,7 @@ const UseUseStateArray = () => {
   };
   return (
     <div>
+      <h3>This is from useState</h3>
       {people.map((people) => {
         const { id, name } = people;
         return (
