@@ -8,6 +8,7 @@ import FetchData from "./topic/04-custom-hooks/FetchData";
 import Navbar from "./topic/05-context-api/context/Navbar";
 import ReducerBasics from "./topic/06-useReducer/ReducerBasics";
 import ExpensiveCalculation from "./topic/07-useMemo/ExpensiveCalculation";
+import UseCallback from "./topic/08-useCallback/UseCallback";
 import "./App.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <MultipleInputs />
       <FetchData />
       <ExpensiveCalculation/>
+      <UseCallback/>
     </>
   );
 }
